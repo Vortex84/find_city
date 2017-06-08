@@ -41,7 +41,6 @@ $(document).ready(function () {
             dataType: "json",
 			data: { "city": city },
 			success: function(response){
-			 
 			    if(response=="err-1"){
                     alert("Ошибка данных!");
                     $("#static_maps").attr('src','');
@@ -75,7 +74,6 @@ $(document).ready(function () {
             }else{
                 response(                    
                     $.map(data, function(item){
-                  
                       return{
                         label: item.name  + ", " + item.countryName,
                         value: item.name
