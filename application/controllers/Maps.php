@@ -59,9 +59,12 @@ class Maps extends CI_Controller {
                          $i++;
                     }
                     
-                    $map = "https://static-maps.yandex.ru/1.x/?l=map&pt=".trim($koords,'~');
-                    
-                    echo json_encode($map);
+                    if($koords!=""){
+                        $map = "https://static-maps.yandex.ru/1.x/?l=map&pt=".trim($koords,'~');
+                        echo json_encode($map);
+                    }else{
+                        echo json_encode("err-3");
+                    }
                 }else{
                     echo json_encode("err-3");
                 }
