@@ -48,7 +48,7 @@
                 return false;
             }
             $("#static_maps").attr('src', '/img/loading.gif');
-
+ 
             $.ajax({
                 url: "/getmap",
                 type: "post",

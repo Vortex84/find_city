@@ -54,7 +54,7 @@ class Maps extends CI_Controller {
         $arr_near = json_decode($json_near);
         
         if(!isset($arr_near->geonames)){ echo json_encode("err-3"); exit(); }
-        
+         
         $i = 1;
         $koords = "";
         foreach($arr_near->geonames as $val){
