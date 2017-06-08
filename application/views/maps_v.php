@@ -103,7 +103,6 @@
             },
             minLength: 3
         });
-
     });
 </script>
 </head>
