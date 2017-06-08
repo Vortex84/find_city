@@ -5,4 +5,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php/$1 [L]
 AddDefaultCharset utf-8
 
-
+DirectoryIndex index.php index.html index.htm 
