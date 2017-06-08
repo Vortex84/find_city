@@ -73,6 +73,8 @@
 
         $("#city").autocomplete({
             source: function (request, response) {
+
+                $("#static_maps").attr('src', '/img/loading.gif');
                 $.ajax({
                     url: "/getcity",
                     dataType: "json",
@@ -81,6 +83,7 @@
                     },
                     success: function (data) {
 
+                        $("#static_maps").attr('src', '');
                         if (data == "err-1") {
                             alert("Ошибка данных!");
                         } else if (data == "err-2") {
