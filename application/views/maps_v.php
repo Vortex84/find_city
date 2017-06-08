@@ -25,6 +25,7 @@ body {
 #city{ width: 300px; }
 #div_map{ background-color: white; width: 600px; height: 450px; }
 .ui-helper-hidden-accessible { display:none; }
+
 </style>
 <script language="javascript">
 $(document).ready(function () {
@@ -32,7 +33,7 @@ $(document).ready(function () {
         city = $("#city").val();
         
         if(city=="" || city.length<3){ alert("Введите название города (более 2-х символов)!"); return false; }
-        $("#static_maps").attr('src','/img/loading.png');
+        $("#static_maps").attr('src','/img/loading.gif');
         
         $.ajax({
 			url: "/getmap",
